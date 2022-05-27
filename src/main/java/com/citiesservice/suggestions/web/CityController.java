@@ -34,6 +34,9 @@ public class CityController {
         if(lat != null && lon != null){
             return cityService.getCitiesByLatAndLong(name, lat, lon);
         }
+        /*
+        * Este metodo no genera puntaje para cada ciudad
+         */
         return cityService.getCitiesByName(name);
     }
 }

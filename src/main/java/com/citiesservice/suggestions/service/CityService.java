@@ -35,13 +35,13 @@ public class CityService {
     }
 
     /**
-     * Metodo para obtener ciudades por nombre, latitud y longuitud
+     * Metodo para obtener ciudades por nombre, latitud y longitud
      * Se usan 2 variables de latitud y 2 de longuitud para representar el rango
-     * de busqueda por latidud y longuitud, se hace la busqueda y luego se crean los puntajes
+     * de busqueda por latidud y longitud, se hace la busqueda y luego se crean los puntajes
      *
      * @param name es el nombre de la ciudad
      * @param lat latitud
-     * @param lon longuitud
+     * @param lon longitud
      */
 
 

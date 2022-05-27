@@ -20,7 +20,7 @@ public class ScoreMaker {
     }
 
     /*
-    * Funcion que usa la formula de distancia entre puntos usando la Latitud y Longuitud
+    * Funcion que usa la formula de distancia entre puntos usando la Latitud y Longitud
      */
     private static Double distanceBetween(City city,Float lat ,Float lon){
         return Math.sqrt(Math.pow(city.getLat() - lat, 2) + Math.pow(city.getLon() - lon, 2));
