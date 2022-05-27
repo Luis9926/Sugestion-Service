@@ -21,7 +21,7 @@ public class City {
 
     private Map<String,String> details;
 
-    private Long score;
+    private Float score;
 
     public City(String name, Float lat, Float lon, Map<String, String> details) {
         this.name = name;
@@ -54,11 +54,11 @@ public class City {
         return details;
     }
 
-    public Long getScore() {
+    public Float getScore() {
         return score;
     }
 
-    public void setScore(Long score) {
+    public void setScore(Float score) {
         this.score = score;
     }
 }

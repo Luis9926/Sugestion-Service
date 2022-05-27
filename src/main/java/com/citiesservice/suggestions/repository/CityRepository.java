@@ -8,8 +8,16 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface CityRepository extends CrudRepository<City,String> {
-    List<City> findByNameLikeIgnoreCase(String name);
+    /*
+    * Spring data permite crear metodos de query utilizando el nombre de la funcion
+    * para especificar el Query de MongoDB
+     */
 
+    /*
+     * Funcion para obtener documentos que contengan algo parecido al string nombre,
+     * sin importar las mayusculas o minusculas
+     */
+    List<City> findByNameLikeIgnoreCase(String name);
 
     @Query(value = "{$and:[" +
             "{'name': /?0/}," +

@@ -21,6 +21,12 @@ public class CityController {
 
     }
 
+    /*
+    * Metodo para obtener datos de ciudades usando 1 parametro obligatorio (nombre)
+    * y 2 parametros opcionales (lat, long), se utiliza un servicio de datos intermediario
+    * para generar la respuesta
+     */
+
     @GetMapping
     public List<City> getCitiesByName(@RequestParam(name = "name") String name,
                                       @RequestParam(required = false,name = "lat")Float lat,
