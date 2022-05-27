@@ -23,6 +23,16 @@ public class CityService {
     }
 
     public List<City> getCitiesByName(String name){
-        return cityRepository.findByNameContaining(name);
+        return cityRepository.findByNameLikeIgnoreCase(name);
     }
+
+    public List<City> getCitiesByLatAndLong(String name, Float lat, Float lon){
+        int queryRange = 4;
+        Float lat1 = lat + queryRange;
+        Float lon1 = lon - queryRange;
+        lat = lat- queryRange;
+        lon = lon + queryRange;
+        return cityRepository.findByNameAndLatAndLong(name,lat,lon,lat1,lon1);
+    }
+
 }

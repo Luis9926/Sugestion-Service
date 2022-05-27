@@ -21,8 +21,13 @@ public class CityController {
 
     }
 
-    @GetMapping("/{name}")
-    public List<City> getCitiesByName(@PathVariable(value = "name") String name){
+    @GetMapping
+    public List<City> getCitiesByName(@RequestParam(name = "name") String name,
+                                      @RequestParam(required = false,name = "lat")Float lat,
+                                      @RequestParam(required = false,name = "long")Float lon){
+        if(lat != null && lon != null){
+            return cityService.getCitiesByLatAndLong(name, lat, lon);
+        }
         return cityService.getCitiesByName(name);
     }
 }
